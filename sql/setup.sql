@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS images;
+
+CREATE TABLE orders (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY,
+  item TEXT NOT NULL,
+  quantity INTEGER CHECK (quantity > 0)
+)
